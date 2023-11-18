@@ -1,0 +1,40 @@
+<div class="font-poppins">
+  <!-- header -->
+  <div
+    style="width: 80vw"
+    class="m-2 mx-auto flex justify-between bg-white px-4 py-4 font-poppins sm:px-8 lg:container">
+    <h1 class="text-xl text-gray-700 font-semibold">Base64 Image Encode & Decode</h1>
+    <h5 class="truncate text-gray-400 text-end text-xs">
+      Do you have to deal with Base64 format? This site is just right for you! <br />Try our easy online tool to encode
+      or decode your data.
+    </h5>
+  </div>
+  <div style="width: 80vw" class="mx-auto flex font-poppins">
+    <textarea
+      [(ngModel)]="base64ImageUrl"
+      style="width: 42.5%; height: 65vh"
+      id="message"
+      rows="4"
+      class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+      placeholder="Paste your base64 string"></textarea>
+    <div style="width: 15%; height: 65vh">
+      <div style="height: 35%"></div>
+      <div style="height: 30%" class="m-auto cursor-pointer text-center text-gray-500">
+        <button class="rounded bg-primary-500 p-2 text-sm text-white hover:bg-primary-600">Switch to decode</button>
+      </div>
+      <div style="height: 35%"></div>
+    </div>
+    <div
+      style="width: 42.5%; height: 65vh"
+      id="message"
+      rows="4"
+      class="flex w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+      placeholder="Enter text">
+      <img
+        (error)="errorLoadingBase64Image($event)"
+        class="m-auto"
+        [src]="base64ImageUrl"
+        alt="base64ImageUrl" />
+    </div>
+  </div>
+</div>

@@ -11,7 +11,7 @@ import { NftHeaderComponent } from '../../components/nft/nft-header/nft-header.c
     templateUrl: './nft.component.html',
     standalone: true,
     imports: [
-        NftHeaderComponent,
+        
         NftDualCardComponent,
         NftSingleCardComponent,
         NftChartCardComponent,
