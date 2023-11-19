@@ -10,14 +10,12 @@ export class Menu {
           icon: 'assets/icons/heroicons/outline/chart-pie.svg',
           label: 'Base64 Image Encode/Decode',
           route: '/dashboard',
-
         },
-         {
-                  icon: 'assets/icons/heroicons/outline/chart-pie.svg',
-                  label: 'Base64 Image Encode/Decode',
-                  route: '/dashboard',
-
-                },
+        {
+          icon: 'assets/icons/heroicons/outline/chart-pie.svg',
+          label: 'Base64 Image Encode/Decode',
+          route: '/dashboard',
+        },
         // {
         //   icon: 'assets/icons/heroicons/outline/lock-closed.svg',
         //   label: 'Auth',
