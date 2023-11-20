@@ -21,8 +21,13 @@
       placeholder="Paste your base64 string"></textarea>
     <div style="width: 15%; height: 65vh">
       <div style="height: 35%"></div>
-      <div style="height: 30%" class="m-auto cursor-pointer text-center text-gray-500">
-        <button class="rounded bg-primary-500 p-2 text-sm text-white hover:bg-primary-600">Switch to encode</button>
+      <div style="height: 30%" class="m-auto mx-2 flex cursor-pointer flex-col space-y-2 text-center text-gray-500">
+        <button (click)="onclickSwitchToEncoder()" class="rounded bg-primary-500 p-2 text-sm text-white hover:bg-primary-600">Switch to encode</button>
+        <button
+          (click)="downloadFile(base64ImageUrl)"
+          class="rounded bg-primary-500 p-2 text-sm text-white hover:bg-primary-600">
+          Download
+        </button>
       </div>
       <div style="height: 35%"></div>
     </div>
@@ -72,3 +77,4 @@
     </ul>
   </div>
 </div>
+<p-toast position="bottom-center"></p-toast>
