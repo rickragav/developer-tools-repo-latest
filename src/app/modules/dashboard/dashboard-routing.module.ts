@@ -14,7 +14,7 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children: [
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: Base64ImageDecoderComponent, pathMatch: 'full' },
       { path: 'base64-image-decoder', component: Base64ImageDecoderComponent, pathMatch: 'full' },
       { path: 'base64-image-encoder', component: Base64ImageEncoderComponent, pathMatch: 'full' },
       { path: 'nfts', component: NftComponent },
