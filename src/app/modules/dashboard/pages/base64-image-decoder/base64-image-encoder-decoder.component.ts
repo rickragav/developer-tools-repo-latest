@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MessageService } from 'primeng/api';
+
 
 @Component({
   selector: 'app-base64-image-encoder-decoder',
@@ -14,7 +14,7 @@ export class Base64ImageDecoderComponent {
 
   displayBase64Image = false;
 
-  constructor(private messageService: MessageService) {}
+  constructor() {}
 
   errorLoadingBase64Image(event: any) {
     event.target.src = this.defaultBase64Image;
@@ -39,9 +39,6 @@ export class Base64ImageDecoderComponent {
     }, 10);
   }
 
-  errorMessage() {
-    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Message Content' });
-  }
 
   downloadFile(data: any): void {
     this.checkImage(data);
