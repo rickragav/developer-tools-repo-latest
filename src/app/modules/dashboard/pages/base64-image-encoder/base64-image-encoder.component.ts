@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -33,6 +34,9 @@ export class Base64ImageEncoderComponent {
       downloadLink.href = linkSource;
       downloadLink.download = 'base64image.png';
       downloadLink.click();
+      setTimeout(() => {
+        
+      }, 1);
       alert('Download Successfull');
     };
     _img.onerror = function () {
@@ -75,4 +79,8 @@ export class Base64ImageEncoderComponent {
       reader.onerror = reject;
     });
   }
+
+  
 }
+
+

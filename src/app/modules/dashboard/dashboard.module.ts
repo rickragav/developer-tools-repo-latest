@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { Base64ImageDecoderComponent } from './pages/base64-image-decoder/base64-image-encoder-decoder.component';
 import { CommonModule } from '@angular/common';
 import { Base64ImageEncoderComponent } from './pages/base64-image-encoder/base64-image-encoder.component';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @NgModule({
-  imports: [DashboardRoutingModule,FormsModule,CommonModule],
-  declarations:[HomeComponent,Base64ImageDecoderComponent,Base64ImageEncoderComponent],
-  providers: []
+  imports: [DashboardRoutingModule, FormsModule, CommonModule, ClipboardModule],
+  declarations: [HomeComponent, Base64ImageDecoderComponent, Base64ImageEncoderComponent],
+  providers: [],
 })
 export class DashboardModule {}

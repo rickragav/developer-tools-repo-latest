@@ -21,7 +21,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build",
+    "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "prettier": "prettier --config ./.prettierrc --write \"src/{app,environments}/**/*{.ts,.html,.scss,.json}\"",
@@ -32,6 +32,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.0.1",
+    "@angular/cdk": "^17.0.1",
     "@angular/common": "^17.0.1",
     "@angular/compiler": "^17.0.1",
     "@angular/core": "^17.0.1",
@@ -46,6 +47,7 @@
     "angular-svg-icon": "^13.0.0",
     "apexcharts": "^3.35.3",
     "ng-apexcharts": "^1.7.1",
+    "ngx-toastr": "^18.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
