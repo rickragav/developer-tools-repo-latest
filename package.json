@@ -42,6 +42,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/typography": "^0.5.4",
+    "@vercel/node": "^3.0.11",
     "angular-svg-icon": "^13.0.0",
     "apexcharts": "^3.35.3",
     "ng-apexcharts": "^1.7.1",
