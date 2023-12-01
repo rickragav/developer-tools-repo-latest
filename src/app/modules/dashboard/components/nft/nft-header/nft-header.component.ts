@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-nft-header',
@@ -6,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
     
 })
 export class NftHeaderComponent implements OnInit {
-  constructor() {}
+
+  navbarOpen = false;
+
+  constructor(private router:Router) {}
 
   ngOnInit(): void {}
+
+  setNavbarOpen() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
+  onLogoClicked(){
+    this.router.navigate(['/dashboard']);
+  }
 }

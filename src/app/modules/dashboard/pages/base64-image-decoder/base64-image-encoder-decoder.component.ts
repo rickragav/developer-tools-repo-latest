@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-base64-image-encoder-decoder',
@@ -14,7 +14,7 @@ export class Base64ImageDecoderComponent {
 
   displayBase64Image = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   errorLoadingBase64Image(event: any) {
     event.target.src = this.defaultBase64Image;
@@ -39,12 +39,11 @@ export class Base64ImageDecoderComponent {
     }, 10);
   }
 
-
   downloadFile(data: any): void {
     this.checkImage(data);
   }
 
   onclickSwitchToEncoder() {
-    window.location.href = 'dashboard/base64-image-encoder';
+    this.router.navigate(['/dashboard/base64-image-encoder']);
   }
 }

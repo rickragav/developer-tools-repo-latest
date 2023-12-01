@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-base64-image-encoder',
@@ -19,7 +19,7 @@ export class Base64ImageEncoderComponent {
 
   displayBase64Image = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   errorLoadingBase64Image(event: any) {
     event.target.src = this.defaultBase64Image;
@@ -34,9 +34,7 @@ export class Base64ImageEncoderComponent {
       downloadLink.href = linkSource;
       downloadLink.download = 'base64image.png';
       downloadLink.click();
-      setTimeout(() => {
-        
-      }, 1);
+      setTimeout(() => {}, 1);
       alert('Download Successfull');
     };
     _img.onerror = function () {
@@ -47,14 +45,12 @@ export class Base64ImageEncoderComponent {
     }, 10);
   }
 
-  
-
   downloadFile(data: any): void {
     this.checkImage(data);
   }
 
   onclickSwitchTodecoder() {
-    window.location.href = 'dashboard/base64-image-decoder';
+    this.router.navigate(['/dashboard/base64-image-decoder']);
   }
 
   async onFileChange(pFileList: any) {
@@ -79,8 +75,4 @@ export class Base64ImageEncoderComponent {
       reader.onerror = reject;
     });
   }
-
-  
 }
-
-

@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { ResponsiveHelperComponent } from './shared/components/responsive-helper/responsive-helper.component';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,5 +14,9 @@ import { ResponsiveHelperComponent } from './shared/components/responsive-helper
 export class AppComponent {
   title = 'Angular Tailwind';
 
-  constructor(public themeService: ThemeService) {}
+  constructor(public themeService: ThemeService) {
+    // this.themeService.theme = !this.themeService.isDark ? 'dark' : 'light';
+
+    themeService.theme = 'dark';
+  }
 }

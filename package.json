@@ -20,7 +20,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve --open --disable-host-check",
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -42,6 +42,7 @@
     "@angular/router": "^17.0.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.4",
     "@vercel/node": "^3.0.11",
     "angular-svg-icon": "^13.0.0",

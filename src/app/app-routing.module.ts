@@ -1,5 +1,7 @@
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ToastNoAnimationModule, ToastrModule } from 'ngx-toastr';
 
 const routes: Routes = [
   {
@@ -14,7 +16,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), ToastNoAnimationModule.forRoot()],
   exports: [RouterModule],
+ // providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
 })
 export class AppRoutingModule {}

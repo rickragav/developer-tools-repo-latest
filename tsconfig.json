@@ -1,7 +1,7 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-	"compileOnSave": false,
-	"compilerOptions": {
+  "compileOnSave": false,
+  "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -20,16 +20,14 @@
     "module": "es2020",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "useDefineForClassFields": false
   },
-	"angularCompilerOptions": {
-		"enableI18nLegacyMessageIdFormat": false,
-		"strictInjectionParameters": true,
-		"strictInputAccessModifiers": true,
-		"strictTemplates": true
-	}
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "types": ["node"]
+  }
 }
