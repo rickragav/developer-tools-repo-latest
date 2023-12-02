@@ -20,8 +20,6 @@ export class Base64DecoderComponent {
   }
 
   decodeBase64() {
-    if (this.base64text) {
-      this.base64DecodedText = this.utilsService.base64Decode(this.base64text);
-    }
+    this.base64DecodedText = this.utilsService.base64Decode(this.base64text);
   }
 }

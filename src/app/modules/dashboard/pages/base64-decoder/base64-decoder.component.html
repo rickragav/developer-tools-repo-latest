@@ -1,59 +1,68 @@
-<div class="flex space-x-4">
-  <div style="width: 15vw" class="my-6 max-h-screen overflow-hidden border border-gray-300">
-    <!-- The img element with Tailwind CSS classes -->
-    <img class="h-full w-full" src="assets/images/googleads1.jpg" alt="Your Image Alt Text" />
-  </div>
-  <div style="width: 70vw" class="py-4 font-poppins">
-    <!-- header -->
-    <div
-      style="width: 70vw"
-      class="mx-auto my-2 flex items-center justify-between border px-8 py-4 font-poppins dark:bg-night-700">
-      <div class="flex flex-col space-y-2">
-        <p class="text-3xl font-semibold dark:text-white">Base64 Decode</p>
-        <p class="truncate text-xs text-gray-400">
-          Effortlessly convert Base64 to text with our user-friendly online tool—paste your Base64 text,<br />
-          copy your decoded text with ease!
-        </p>
-      </div>
-      <button
-        (click)="onclickSwitchToEncoder()"
-        class="h-10 flex-none rounded-md bg-primary-500 px-4 py-2.5 text-xs font-semibold text-white hover:bg-primary-600">
-        Switch to encode
-      </button>
+<div class="flex bg-gradient-to-r from-purple-500 via-pink-400 to-blue-500 font-poppins">
+  <div class="flex w-full flex-col space-x-4 md:flex-row">
+    <!-- Left Image Container -->
+    <div class="my-6 hidden max-h-screen w-1/4 overflow-hidden border border-gray-300 md:block">
+      <img class="h-full w-full" src="assets/images/googleads1.jpg" alt="Your Image Alt Text" />
     </div>
 
-    <!-- body -->
-    <div style="width: 70vw" class="mx-auto my-4">
-      <p class="my-4 text-xl dark:text-white">Base64</p>
-      <div class="border">
+    <!-- Center Content Container -->
+    <div class="w-full py-4 pr-5 font-poppins">
+      <button
+        (click)="onclickSwitchToEncoder()"
+        class="block h-10 flex-none rounded-md bg-night-500 px-4 py-2.5 text-xs font-semibold text-white hover:bg-night-900 md:hidden">
+        Switch to encode
+      </button>
+
+      <!-- Header -->
+      <div
+        class="mx-auto my-2 flex flex-col items-center border bg-blue-100 px-8 py-4 font-poppins text-black opacity-80 md:flex-row md:justify-between">
+        <div class="flex flex-col space-y-2">
+          <p class="text-xl font-semibold md:text-3xl">Base64 Decode</p>
+          <p class="hidden truncate text-xs text-gray-700 md:block md:text-xs">
+            Effortlessly convert Base64 to text with our user-friendly online tool—paste your Base64 text,<br />
+            copy your decoded text with ease!
+          </p>
+        </div>
+
+        <button
+          (click)="onclickSwitchToEncoder()"
+          class="hidden h-10 flex-none rounded-md bg-night-500 px-4 py-2.5 text-xs font-semibold text-white hover:bg-night-900 md:block">
+          Switch to encode
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="mx-auto my-4">
+        <p class="my-4 text-xl text-white">Base64</p>
         <textarea
           id="message"
           [(ngModel)]="base64text"
           rows="10"
-          class="focus:outline-none: h-full w-full border focus:ring-0 dark:text-white"
+          class="h-full w-full border bg-blue-100 opacity-80 focus:outline-none focus:ring-0"
           placeholder="Enter base64.."></textarea>
-      </div>
-      <button
-        (click)="decodeBase64()"
-        class="float-right my-4 h-10 flex-none rounded-md bg-primary-500 px-10 py-2.5 text-xs font-semibold text-white hover:bg-primary-600">
-        Decode
-      </button>
-    </div>
 
-    <br />
-    <div style="width: 70vw" class="mx-auto my-4">
-      <p class="my-4 text-xl dark:text-white">Decoded Text</p>
-      <div class="border">
+        <button
+          (click)="decodeBase64()"
+          class="float-right my-4 h-10 flex-none rounded-md bg-primary-500 px-10 py-2.5 text-xs font-semibold text-white hover:bg-primary-600">
+          Decode
+        </button>
+      </div>
+
+      <!-- Decoded Text -->
+      <div class="mx-auto my-4">
+        <p class="my-4 text-xl text-white">Decoded Text</p>
         <textarea
           [(ngModel)]="base64DecodedText"
           id="message"
           rows="10"
-          class="focus:outline-none: h-full w-full border focus:ring-0 dark:text-white"></textarea>
+          placeholder="Decoded Text.."
+          class="h-full w-full border bg-blue-100 opacity-80 focus:outline-none focus:ring-0"></textarea>
       </div>
     </div>
-  </div>
-  <div style="width: 15vw" class="my-6 max-h-screen overflow-hidden border border-gray-300">
-    <!-- The img element with Tailwind CSS classes -->
-    <img class="h-full w-full" src="assets/images/googleads2.jpg" alt="Your Image Alt Text" />
+
+    <!-- Right Image Container -->
+    <div class="my-6 hidden max-h-screen w-1/4 overflow-hidden border border-gray-300 md:block">
+      <img class="h-full w-full" src="assets/images/googleads2.jpg" alt="Your Image Alt Text" />
+    </div>
   </div>
 </div>

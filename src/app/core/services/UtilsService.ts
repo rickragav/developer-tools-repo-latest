@@ -6,8 +6,11 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root',
 })
 export class UtilsService {
-  constructor(private toastr:ToastrService) {}
+  constructor(private toastr: ToastrService) {}
   base64Decode(base64String: string): string {
+    if (!base64String) {
+      return '';
+    }
     try {
       if (base64String.includes('&')) {
         const decodedParts = base64String.split('&').map((part) => part.split('$').map(atob).join(''));
@@ -16,7 +19,19 @@ export class UtilsService {
         return atob(base64String);
       }
     } catch (error: any) {
-        this.toastr.error(error.message);
+      this.toastr.error(error.message);
+      return '';
+    }
+  }
+
+  base64Encode(data: string): string {
+    if (!data) {
+      return '';
+    }
+    try {
+      return btoa(data);
+    } catch (error: any) {
+      this.toastr.error(error.message);
       return '';
     }
   }

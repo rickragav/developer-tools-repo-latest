@@ -10,10 +10,11 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { ApiService } from 'src/app/core/api/api.service';
 import { Base64DecoderComponent } from './pages/base64-decoder/base64-decoder.component';
 import { UtilsService } from 'src/app/core/services/UtilsService';
+import { Base64EncoderComponent } from './pages/base64-encoder/base64-encoder.component';
 
 @NgModule({
   imports: [DashboardRoutingModule, FormsModule, CommonModule, ClipboardModule],
-  declarations: [HomeComponent, Base64ImageDecoderComponent, Base64ImageEncoderComponent,Base64DecoderComponent],
+  declarations: [HomeComponent, Base64ImageDecoderComponent, Base64ImageEncoderComponent,Base64DecoderComponent,Base64EncoderComponent],
   providers: [ApiService,UtilsService],
 })
 export class DashboardModule {}
